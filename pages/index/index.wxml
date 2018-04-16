@@ -1,0 +1,10 @@
+<!--index.wxml-->  
+<view class="swiper-tab" >  
+    <view bindtap="swithNav" wx:for="{{tabCont}}" wx:key="item.index" class="swiper-tab-list {{currentTab==item.index?'active':''}}" data-current='{{item.index}}' >{{item.title}}</view>  
+</view>  
+<swiper class="swiper-box" current="{{currentTab}}" duration="300" style="height:400px" bindchange="GetCurrentTab" data-current='6' >  
+    <swiper-item wx:for="{{tabCont}}" wx:key="item.index">  
+      <image src='{{item.pic}}'></image>
+      <view>{{item.title}}</view>
+    </swiper-item>  
+</swiper>  
